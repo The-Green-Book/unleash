@@ -110,6 +110,7 @@ async function createApp(options) {
 
 async function start(opts) {
     const options = createOptions(opts);
+    console.log('options created: ', options);
     const logger = options.getLogger('server-impl.js');
 
     try {

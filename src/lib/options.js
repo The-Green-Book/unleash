@@ -120,6 +120,7 @@ module.exports = {
 
         // Use DATABASE_URL when 'db' not defined.
         if (!opts.db && options.databaseUrl) {
+            console.log('!opts.db this should not happen')
             options.db = parseDbUrl(options.databaseUrl);
             options.db.pool = defaultOptions().db.pool;
         }
