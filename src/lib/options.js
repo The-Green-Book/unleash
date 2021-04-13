@@ -13,8 +13,8 @@ function defaultDatabaseUrl() {
     if (process.env.DATABASE_URL_FILE) {
         return readFileSync(process.env.DATABASE_URL_FILE, 'utf8');
     }
-    if (process.env.DATABASE_URL) {
-        return process.env.DATABASE_URL;
+    if (process.env.HEROKU_POSTGRESQL_BLACK_URL) {
+        return process.env.HEROKU_POSTGRESQL_BLACK_URL;
     }
     return undefined;
 }
